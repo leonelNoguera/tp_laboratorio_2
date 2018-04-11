@@ -21,11 +21,12 @@ namespace FormularioCalculadora
         private void Form1_Load(object sender, EventArgs e)
         {
             btnConvertirADecimal.Enabled = false;
+            btnConvertirABinario.Enabled = false;
+
+            lblResultado.AutoSize = true;
 
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-
-            //this.FormBorderStyle = FixedSingle;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -39,36 +40,38 @@ namespace FormularioCalculadora
             Double numeroUno;
             Double numeroDos;
             Double resultado;
-            if (Double.TryParse(txtNumero1.Text, out numeroUno) == true)
+            if ((Double.TryParse(txtNumero1.Text, out numeroUno) == true) && (Double.TryParse(txtNumero2.Text, out numeroDos) == true))
             {
-                if (Double.TryParse(txtNumero2.Text, out numeroDos) == true)
-                {
-                    Numero num1 = new Numero(numeroUno);
-                    Numero num2 = new Numero(numeroDos);
-                    resultado = miCalculadora.Operar(num1, num2, cmbOperador.Text);
+                Numero num1 = new Numero(numeroUno);
+                Numero num2 = new Numero(numeroDos);
+                resultado = miCalculadora.Operar(num1, num2, cmbOperador.Text);
 
+                Console.WriteLine(resultado);
+
+                if (!(Double.IsInfinity(resultado)))
+                {
                     lblResultado.Text = "" + resultado;
                 }
                 else
                 {
-                    txtNumero2.Clear();
+                    lblResultado.Text = "División por cero";
                 }
+
+                btnConvertirABinario.Enabled = true;
+                btnConvertirADecimal.Enabled = false;
             }
             else
             {
-                txtNumero1.Clear();
-            }
+                lblResultado.Text = "Valores inválidos";
 
-            btnConvertirABinario.Enabled = true;
-            btnConvertirADecimal.Enabled = false;
+                btnConvertirADecimal.Enabled = false;
+                btnConvertirABinario.Enabled = false;
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
-
-            btnConvertirABinario.Enabled = true;
-            btnConvertirADecimal.Enabled = true;
         }
 
         private void Limpiar()
@@ -76,10 +79,14 @@ namespace FormularioCalculadora
             txtNumero1.Clear();
             txtNumero2.Clear();
             lblResultado.Text = "";
+            
             if (cmbOperador.SelectedIndex >= 0)
             {
                 cmbOperador.SetSelected(cmbOperador.SelectedIndex, false);
             }
+
+            btnConvertirABinario.Enabled = false;
+            btnConvertirADecimal.Enabled = false;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -91,24 +98,33 @@ namespace FormularioCalculadora
         {
             Numero numeroAux = new Numero();
 
-            //lblResultado.Text = numeroAux.DecimalBinario(lblResultado.Text);
+            Double resultado;
+            Double.TryParse(lblResultado.Text, out resultado);
 
-            //Double.TryParse(lblResultado.Text, out )
+            if (resultado >= 0)
+            {
+                lblResultado.Text = numeroAux.DecimalBinario(lblResultado.Text);
 
-            lblResultado.Text = numeroAux.DecimalBinario(lblResultado.Text);
-
-            btnConvertirABinario.Enabled = false;
-            btnConvertirADecimal.Enabled = true;
+                btnConvertirABinario.Enabled = false;
+                btnConvertirADecimal.Enabled = true;
+            }
+            else
+            {
+                lblResultado.Text = "La conversión de decimal negativo a binario no está disponible";
+            }
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             Numero numeroAux = new Numero();
 
-            lblResultado.Text = numeroAux.BinarioDecimal(lblResultado.Text);
+            if (!(String.IsNullOrEmpty(lblResultado.Text)))
+            {
+                lblResultado.Text = numeroAux.BinarioDecimal(lblResultado.Text);
 
-            btnConvertirADecimal.Enabled = false;
-            btnConvertirABinario.Enabled = true;
+                btnConvertirADecimal.Enabled = false;
+                btnConvertirABinario.Enabled = true;
+            }
         }
 
         private void cmbOperador_SelectedIndexChanged(object sender, EventArgs e)
@@ -117,6 +133,11 @@ namespace FormularioCalculadora
         }
 
         private void txtNumero1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblResultado_Click(object sender, EventArgs e)
         {
 
         }

@@ -92,11 +92,12 @@
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(392, 19);
+            this.lblResultado.Location = new System.Drawing.Point(191, 23);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(91, 13);
+            this.lblResultado.Size = new System.Drawing.Size(0, 13);
             this.lblResultado.TabIndex = 5;
-            this.lblResultado.Text = "                            ";
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblResultado.Click += new System.EventHandler(this.lblResultado_Click);
             // 
             // txtNumero1
             // 
