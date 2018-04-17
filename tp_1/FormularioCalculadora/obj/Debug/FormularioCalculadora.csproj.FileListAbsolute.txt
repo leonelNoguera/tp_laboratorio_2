@@ -34,3 +34,14 @@ D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_1\FormularioCalculadora\obj\Debug\FormularioCalculadora.Form1.resources
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_1\FormularioCalculadora\obj\Debug\FormularioCalculadora.Properties.Resources.resources
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_1\FormularioCalculadora\obj\Debug\FormularioCalculadora.csproj.GenerateResource.Cache
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\FormularioCalculadora\bin\Debug\FormularioCalculadora.exe.config
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\FormularioCalculadora\obj\Debug\FormularioCalculadora.exe
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\FormularioCalculadora\obj\Debug\FormularioCalculadora.pdb
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\FormularioCalculadora\bin\Debug\FormularioCalculadora.exe
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\FormularioCalculadora\bin\Debug\FormularioCalculadora.pdb
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\FormularioCalculadora\bin\Debug\Matematicas.dll
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\FormularioCalculadora\bin\Debug\Matematicas.pdb
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\FormularioCalculadora\obj\Debug\FormularioCalculadora.csprojResolveAssemblyReference.cache
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\FormularioCalculadora\obj\Debug\FormularioCalculadora.Form1.resources
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\FormularioCalculadora\obj\Debug\FormularioCalculadora.Properties.Resources.resources
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\FormularioCalculadora\obj\Debug\FormularioCalculadora.csproj.GenerateResource.Cache

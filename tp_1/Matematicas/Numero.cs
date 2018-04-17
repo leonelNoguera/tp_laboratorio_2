@@ -8,7 +8,7 @@ namespace Matematicas
 {
     public class Numero
     {
-        private Double numero;
+        private Double _numero;
 
         public Double SetNumero
         {
@@ -16,9 +16,7 @@ namespace Matematicas
             {
                 String strNumero = "" + value;
 
-                numero = ValidarNumero(strNumero);
-
-                Console.WriteLine("ValidarNumero retorna: " + ValidarNumero(strNumero));
+                _numero = ValidarNumero(strNumero);
             }
             
         }
@@ -26,7 +24,7 @@ namespace Matematicas
         {
             get
             {
-                return numero;
+                return _numero;
             }
 
         }
@@ -109,10 +107,6 @@ namespace Matematicas
         public Numero(Double numero)
         {
             this.SetNumero = numero;
-
-            //this.numero = numero;
-
-            Console.WriteLine("El numero luego del SetNumero es: " + this.GetNumero);
         }
 
         public Numero(String strNumero)

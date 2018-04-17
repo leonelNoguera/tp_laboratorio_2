@@ -8,3 +8,8 @@ D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\NogueraMarcelo.tp
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\NogueraMarcelo.tp_1\Matematicas\obj\Debug\Matematicas.csprojResolveAssemblyReference.cache
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\NogueraMarcelo.tp_1\Matematicas\obj\Debug\Matematicas.dll
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\NogueraMarcelo.tp_1\Matematicas\obj\Debug\Matematicas.pdb
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\Matematicas\bin\Debug\Matematicas.dll
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\Matematicas\bin\Debug\Matematicas.pdb
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\Matematicas\obj\Debug\Matematicas.csprojResolveAssemblyReference.cache
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\Matematicas\obj\Debug\Matematicas.dll
+D:\marceloNoguera\tp_laboratorio_2-master\tp_1\Matematicas\obj\Debug\Matematicas.pdb
