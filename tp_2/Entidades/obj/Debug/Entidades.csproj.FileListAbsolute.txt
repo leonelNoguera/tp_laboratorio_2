@@ -13,3 +13,8 @@ D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\Entidades\obj\Debug\Entidades.pdb
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\Entidades\bin\Debug\Entidades.dll
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\Entidades\bin\Debug\Entidades.pdb
+D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\Entidades\obj\Debug\Entidades.dll
+D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\Entidades\bin\Debug\Entidades.dll
+D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\Entidades\bin\Debug\Entidades.pdb
+D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\Entidades\obj\Debug\Entidades.pdb

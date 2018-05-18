@@ -51,7 +51,7 @@ namespace Entidades_2017
         {
             StringBuilder sb = new StringBuilder();
 
-            p.CantidadCalorias
+            //p.CantidadCalorias
 
             sb.AppendLine("CODIGO DE BARRAS: " + p._codigoDeBarras + "\r\n");
             sb.AppendLine("MARCA          : " + p._marca.ToString() + "\r\n");
