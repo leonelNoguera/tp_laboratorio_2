@@ -8,8 +8,6 @@ namespace Matematicas
 {
     public class Calculadora
     {
-        Numero claseNumero = new Numero();
-
         public Double Operar(Numero num1, Numero num2, String operador)
         {
             //validará y realizará la operación pedida entre ambos números.
@@ -19,7 +17,6 @@ namespace Matematicas
 
             if (operadorAux == "+")
             {
-                Console.WriteLine("OperadorSuma retorna: " + (num1 + num2));
                 resultado = (num1 + num2);
             }
             else
