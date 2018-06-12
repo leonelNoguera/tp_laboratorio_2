@@ -8,6 +8,10 @@ namespace Entidades
 {
     public class Paquete : IMostrar<Paquete>
     {
+        private String _direccionEntrega;
+        private EEstado _estado;
+        private String _trackingID;
+
         public String DireccionEntrega
         {
             get
@@ -53,19 +57,19 @@ namespace Entidades
         {
             return "";
         }
+        
+        public static Boolean operator !=(Paquete p1, Paquete p2)
+        {
+            Boolean resultado = !(p1 == p2);
 
+            return resultado;
+        }
+        
         public static Boolean operator ==(Paquete p1, Paquete p2)
         {
             Boolean resultado = false;
 
 
-
-            return resultado;
-        }
-
-        public static Boolean operator !=(Paquete p1, Paquete p2)
-        {
-            Boolean resultado = !(p1==p2);
 
             return resultado;
         }
@@ -80,8 +84,13 @@ namespace Entidades
             return "";
         }
 
-        
+        /*private DelegadoEstado InformaEstado(object sender, EventArgs e) // Debe retornar.
+        {
+            return new MiDelegado(miClase.MiMetodo);
+        }*/
 
+        public delegate void DelegadoEstado(object sender, EventArgs e); 
+        
         public enum EEstado
         {
             Ingresado,

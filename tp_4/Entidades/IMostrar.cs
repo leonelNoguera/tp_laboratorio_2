@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public interface IMostrar<Paquete>// : IEnumerable<T>
+    public interface IMostrar<T>
     {
-        String MostrarDatos(IMostrar<Paquete> elemento);
+        String MostrarDatos(IMostrar<T> elemento);
     }
 }

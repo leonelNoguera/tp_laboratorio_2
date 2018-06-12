@@ -1,18 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Entidades
 {
     public class Correo
     {
+        
+
+        private List<Thread> _mockPaquetes;
+        private List<Paquete> _paquetes;
+
         public List<Paquete> Paquetes
         {
             get
             {
-                return new List<Paquete>();
+                return this._paquetes;
             }
             set
             {
