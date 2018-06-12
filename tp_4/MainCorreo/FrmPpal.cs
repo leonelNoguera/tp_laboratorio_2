@@ -34,10 +34,10 @@ namespace MainCorreo
 
         }
 
-        protected override void Dispose(Boolean disposing)
+        /*protected override void Dispose(Boolean disposing)
         {
 
-        }
+        }*/
 
         public FrmPpal()
         {
@@ -55,11 +55,6 @@ namespace MainCorreo
         }*/
 
         private void MostrarInformacion<T>(IMostrar<Paquete> elemento)
-        {
-
-        }
-
-        private void mostrarToolStripMenuItem_Click(Object sender, EventArgs e)
         {
 
         }

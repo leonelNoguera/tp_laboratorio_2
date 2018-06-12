@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainCorreo", "MainCorreo\Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{53DDF318-46B3-4947-80D1-E1C4F804D361}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesDAO", "EntidadesDAO\EntidadesDAO.csproj", "{C396ED4F-5846-452A-9CB3-FAB3282E4A15}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,10 +19,6 @@ Global
 		{53DDF318-46B3-4947-80D1-E1C4F804D361}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53DDF318-46B3-4947-80D1-E1C4F804D361}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53DDF318-46B3-4947-80D1-E1C4F804D361}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C396ED4F-5846-452A-9CB3-FAB3282E4A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C396ED4F-5846-452A-9CB3-FAB3282E4A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C396ED4F-5846-452A-9CB3-FAB3282E4A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C396ED4F-5846-452A-9CB3-FAB3282E4A15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

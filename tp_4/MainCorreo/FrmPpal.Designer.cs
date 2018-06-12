@@ -229,6 +229,26 @@
 
         }
 
+        private void label1_Click(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void TrackingID_MaskInputRejected(object sender, System.Windows.Forms.MaskInputRejectedEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void groupBox1_Enter(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
