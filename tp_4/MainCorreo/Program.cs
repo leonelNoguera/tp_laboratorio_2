@@ -12,10 +12,7 @@ namespace MainCorreo
     {
         static void Main()
         {
-            //String connectionStr = "Data Source=[Instancia Del Servidor];Initial Catalog=correo-sp-2017;Integrated Security=True";
-            //SqlConnection conexion = new SqlConnection(connectionStr);
-
-
+            
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
