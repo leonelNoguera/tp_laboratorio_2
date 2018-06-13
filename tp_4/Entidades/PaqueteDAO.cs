@@ -37,20 +37,48 @@ namespace Entidades
 
         public Boolean Insertar(Paquete p)
         {
-            /*// CREO UN OBJETO SQLCONECTION
-            this._conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
+            bool todoOk = false;
+
+            string sql = "INSERT INTO Personas (direccionEntrega, trackingID, alumno) VALUES(";
+            sql = sql + "'" + p.Nombre + "','" + p.Apellido + "'," + p.Edad.ToString() + ")";
+
+            try
+            {
+                // LE PASO LA INSTRUCCION SQL
+                this._comando.CommandText = sql;
+
+                // ABRO LA CONEXION A LA BD
+                this._conexion.Open();
+
+                // EJECUTO EL COMMAND
+                this._comando.ExecuteNonQuery();
+
+                todoOk = true;
+
+            }
+            catch (Exception)
+            {
+                todoOk = false;
+            }
+            finally
+            {
+                if (todoOk)
+                    this._conexion.Close();               
+            }
+            return todoOk;
+ 
+        }*/
+
+        private PaqueteDAO()
+        {
+            // CREO UN OBJETO SQLCONECTION
+            this._conexion = new SqlConnection(Properties.Settings.Default.MiConexion);
             // CREO UN OBJETO SQLCOMMAND
             this._comando = new SqlCommand();
             // INDICO EL TIPO DE COMANDO
             this._comando.CommandType = System.Data.CommandType.Text;
             // ESTABLEZCO LA CONEXION
-            this._comando.Connection = this._conexion;*/
-            return false;
-        }
-
-        private PaqueteDAO()
-        {
-
+            this._comando.Connection = this._conexion;
         }
     }
 }

@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Correo
+    public class Correo : IMostrar<List<Paquete>>
     {
-        
-
         private List<Thread> _mockPaquetes;
         private List<Paquete> _paquetes;
+        //public List<Paquete> _paquetes;
 
         public List<Paquete> Paquetes
         {
@@ -23,7 +22,7 @@ namespace Entidades
             }
             set
             {
-
+                this._paquetes = value;
             }
         }
 
@@ -49,9 +48,23 @@ namespace Entidades
 
         public static Correo operator +(Correo c, Paquete p)
         {
-            Correo resultado = new Correo();
+            Correo resultado = c;
 
+            Boolean estaElPaquete = false;
 
+            foreach (Paquete item in c.Paquetes)
+            {
+                if (item == p)
+                {
+                    estaElPaquete = true;
+                    throw new TrackingIdRepetidoException("El paquete ya está en el correo.");
+                }
+            }
+
+            if(!estaElPaquete)
+            {
+                c.Paquetes.Add(p);
+            }
 
             return resultado;
         }

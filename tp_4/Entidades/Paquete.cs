@@ -16,11 +16,11 @@ namespace Entidades
         {
             get
             {
-                return "";
+                return this._direccionEntrega;
             }
             set
             {
-
+                this._direccionEntrega = value;
             }
         }
 
@@ -28,11 +28,11 @@ namespace Entidades
         {
             get
             {
-                return EEstado.Ingresado;
+                return this._estado;
             }
             set
             {
-
+                this._estado = value;
             }
         }
 
@@ -40,11 +40,11 @@ namespace Entidades
         {
             get
             {
-                return "";
+                return this._trackingID;
             }
             set
             {
-
+                this._trackingID = value;
             }
         }
 
@@ -52,26 +52,37 @@ namespace Entidades
         {
 
         }
-        
+
+        /*MostrarDatos utilizará string.Format con el siguiente formato "{0} para {1}", p.trackingID,
+        p.direccionEntrega para compilar la información del paquete.*/
         public String MostrarDatos(IMostrar<Paquete> elemento)
         {
-            return "";
+            String retorno = "";
+            // Aún falta...
+            retorno = String.Format("" + elemento.ToString());
+            
+            return retorno;
         }
         
         public static Boolean operator !=(Paquete p1, Paquete p2)
         {
-            Boolean resultado = !(p1 == p2);
-
-            return resultado;
+            /*Boolean resultado = !(p1 == p2);
+            return resultado;*/
+            return !(p1 == p2);
         }
         
         public static Boolean operator ==(Paquete p1, Paquete p2)
         {
-            Boolean resultado = false;
+            /*Boolean resultado = false;
 
+            if (p1.TrackingID.Equals(p2.TrackingID))
+            {
+                resultado = true;
+            }
 
+            return resultado;*/
 
-            return resultado;
+            return p1.TrackingID.Equals(p2.TrackingID);
         }
 
         public Paquete(String direccionEntrega, String trackingID)
@@ -79,15 +90,17 @@ namespace Entidades
 
         }
 
-        public String ToString()
+        public override String ToString()
         {
             return "";
         }
 
-        /*private DelegadoEstado InformaEstado(object sender, EventArgs e) // Debe retornar.
+        /*private void InformaEstado(object sender, EventArgs e) // Debe retornar.
         {
-            return new MiDelegado(miClase.MiMetodo);
+            //return new DelegadoEstado();
         }*/
+
+        public event DelegadoEstado InformaEstado;
 
         public delegate void DelegadoEstado(object sender, EventArgs e); 
         
