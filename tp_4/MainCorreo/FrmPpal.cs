@@ -53,7 +53,7 @@ namespace MainCorreo
             b. Agregará el paquete al correo, controlando las excepciones que puedan derivar de dicha
             acción.
             c. Llamará al método ActualizarEstados.*/
-            Paquete p = new Paquete(txtDireccion.Text, mtxtTrackingID.Text);
+            Paquete p = new Paquete(this.txtDireccion.Text, this.mtxtTrackingID.Text);
             p.InformarEstado += this.paq_InformarEstado;
 
             try
@@ -90,7 +90,7 @@ namespace MainCorreo
             if (elemento != null)
             {
                 this.rtbMostrar.AppendText(elemento.MostrarDatos(elemento));
-                GuardaString.Guardar(this.rtbMostrar.ToString(), "salida.txt");
+                GuardaString.Guardar(this.rtbMostrar.Text, "salida.txt");
             }
         }
 

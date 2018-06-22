@@ -9,7 +9,7 @@ namespace Entidades
 {
     public static class GuardaString
     {
-        public static Boolean Guardar(this String texto, String archivo)
+        public static Boolean Guardar(String texto, String archivo)
         {
             Boolean retorno = true;
 

@@ -58,10 +58,10 @@ namespace Entidades
         e. Finalmente guardar los datos del paquete en la base de datos.*/
         public void MockCicloDeVida()
         {
-            while (this._estado != EEstado.Entregado)
+            while (this.Estado != EEstado.Entregado)
             {
                 Thread.Sleep(10000);
-                this._estado++;
+                this.Estado++;
                 this.InformarEstado(this, new EventArgs());
             }
             try
@@ -88,28 +88,18 @@ namespace Entidades
         
         public static Boolean operator !=(Paquete p1, Paquete p2)
         {
-            /*Boolean resultado = !(p1 == p2);
-            return resultado;*/
             return !(p1 == p2);
         }
         
         public static Boolean operator ==(Paquete p1, Paquete p2)
         {
-            /*Boolean resultado = false;
-
-            if (p1.TrackingID.Equals(p2.TrackingID))
-            {
-                resultado = true;
-            }
-
-            return resultado;*/
-
             return p1.TrackingID.Equals(p2.TrackingID);
         }
 
         public Paquete(String direccionEntrega, String trackingID)
         {
-
+            this.DireccionEntrega = direccionEntrega;
+            this.TrackingID = trackingID;
         }
 
         public override String ToString()

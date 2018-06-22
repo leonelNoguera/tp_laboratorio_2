@@ -61,7 +61,7 @@
             this.groupBox1.Controls.Add(this.lblEstadoIngresado);
             this.groupBox1.Location = new System.Drawing.Point(12, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(762, 167);
+            this.groupBox1.Size = new System.Drawing.Size(809, 167);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estados Paquetes";
@@ -72,7 +72,7 @@
             this.lstEstadoIngresado.FormattingEnabled = true;
             this.lstEstadoIngresado.Location = new System.Drawing.Point(26, 59);
             this.lstEstadoIngresado.Name = "lstEstadoIngresado";
-            this.lstEstadoIngresado.Size = new System.Drawing.Size(126, 108);
+            this.lstEstadoIngresado.Size = new System.Drawing.Size(202, 108);
             this.lstEstadoIngresado.TabIndex = 5;
             // 
             // lstEstadoEnViaje
@@ -80,7 +80,7 @@
             this.lstEstadoEnViaje.FormattingEnabled = true;
             this.lstEstadoEnViaje.Location = new System.Drawing.Point(314, 59);
             this.lstEstadoEnViaje.Name = "lstEstadoEnViaje";
-            this.lstEstadoEnViaje.Size = new System.Drawing.Size(126, 108);
+            this.lstEstadoEnViaje.Size = new System.Drawing.Size(253, 108);
             this.lstEstadoEnViaje.TabIndex = 4;
             // 
             // lstEstadoEntregado
@@ -88,7 +88,7 @@
             this.lstEstadoEntregado.FormattingEnabled = true;
             this.lstEstadoEntregado.Location = new System.Drawing.Point(624, 51);
             this.lstEstadoEntregado.Name = "lstEstadoEntregado";
-            this.lstEstadoEntregado.Size = new System.Drawing.Size(126, 108);
+            this.lstEstadoEntregado.Size = new System.Drawing.Size(176, 108);
             this.lstEstadoEntregado.TabIndex = 3;
             // 
             // lblEstadoEntregado
@@ -201,13 +201,13 @@
             this.cmsListas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mostrarToolStripMenuItem});
             this.cmsListas.Name = "cmsListas";
-            this.cmsListas.Size = new System.Drawing.Size(153, 48);
+            this.cmsListas.Size = new System.Drawing.Size(125, 26);
             this.cmsListas.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // mostrarToolStripMenuItem
             // 
             this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
-            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.mostrarToolStripMenuItem.Text = "Mostrar...";
             this.mostrarToolStripMenuItem.Click += new System.EventHandler(this.mostrarToolStripMenuItem_Click_1);
             // 

@@ -58,23 +58,30 @@ namespace Entidades
         {
             Correo resultado = c;
 
-            Boolean estaElPaquete = false;
-
+            Boolean existe = false;
             foreach (Paquete item in c.Paquetes)
             {
+                
                 if (item == p)
                 {
-                    estaElPaquete = true;
-                    throw new TrackingIdRepetidoException("El paquete ya está en el correo.");
+                    throw new TrackingIdRepetidoException("El paquete con el ID" + p.TrackingID + "ya está en el correo.");
+                    existe = true;
                 }
             }
 
-            if(!estaElPaquete)
+            if (!existe)
             {
-                c.Paquetes.Add(p);
-                Thread hilo = new Thread(p.MockCicloDeVida);
-                c._mockPaquetes.Add(hilo);
-                hilo.Start();
+                try
+                {
+                    c.Paquetes.Add(p);
+                    Thread hilo = new Thread(p.MockCicloDeVida);
+                    c._mockPaquetes.Add(hilo);
+                    hilo.Start();
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             return resultado;

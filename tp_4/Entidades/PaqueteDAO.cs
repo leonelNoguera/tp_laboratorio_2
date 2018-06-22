@@ -42,17 +42,14 @@ namespace Entidades
 
             PaqueteDAO._comando.Connection = PaqueteDAO._conexion;
 
-            
-
-            //String.Format("INSERT into [correo-sp-2017].[dbo].[Paquetes]([direccionEntrega],[trackingID],[alumno]) VALUES ('{0}','{1}','Alejandro Ledesma')", p.DireccionEntrega, p.TrackingID), PaqueteDAO._conexion);
-
             try
             {
                 // ABRO LA CONEXION A LA BD
                 PaqueteDAO._conexion.Open();
 
                 // LE PASO LA INSTRUCCION SQL
-                PaqueteDAO._comando = new SqlCommand("INSERT INTO [correo-sp-2017].[dbo].[Paquetes]([direccionEntrega], [trackingID], [alumno]) VALUES(" + "'" + p.DireccionEntrega + "','" + p.TrackingID + "'," + "Noguera Marcelo" + ")", PaqueteDAO._conexion);
+                PaqueteDAO._comando = new SqlCommand("INSERT INTO [correo-sp-2017].[dbo].[Paquetes]([direccionEntrega],[trackingID],[alumno]) VALUES(" + "'" + p.DireccionEntrega + "','" + p.TrackingID + "','" + "Noguera Marcelo'" + ")", PaqueteDAO._conexion);
+                //INSERT INTO [correo-sp-2017].[dbo].[Paquetes]([direccionEntrega],[trackingID],[alumno]) VALUES('direccion','6442','Noguera Marcelo');
 
                 // EJECUTO EL COMMAND
                 if (PaqueteDAO._comando.ExecuteNonQuery() != 0)
@@ -79,10 +76,7 @@ namespace Entidades
 
         static PaqueteDAO()
         {
-            // CREO UN OBJETO SQLCONECTION
             PaqueteDAO._conexion = new SqlConnection(Properties.Settings.Default.MiConexion);
-            // CREO UN OBJETO SQLCOMMAND
-            PaqueteDAO._comando = new SqlCommand();
         }
     }
 }
