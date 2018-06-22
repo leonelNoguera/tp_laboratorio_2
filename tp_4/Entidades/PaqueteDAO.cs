@@ -30,28 +30,28 @@ namespace Entidades
     GO
     SET ANSI_PADDING OFF
     GO*/
-    public class PaqueteDAO
+    public static class PaqueteDAO
     {
-        private SqlCommand _comando;
-        private SqlConnection _conexion;
+        private static SqlCommand _comando;
+        private static SqlConnection _conexion;
 
-        public Boolean Insertar(Paquete p)
+        public static Boolean Insertar(Paquete p)
         {
             bool todoOk = false;
 
-            string sql = "INSERT INTO Personas (direccionEntrega, trackingID, alumno) VALUES(";
-            sql = sql + "'" + p.Nombre + "','" + p.Apellido + "'," + p.Edad.ToString() + ")";
+            String sql = "INSERT INTO Personas (direccionEntrega, trackingID, alumno) VALUES(";
+            sql = sql + "'" + p.DireccionEntrega + "','" + p.TrackingID+ "'," + "Noguera Marcelo" + ")";
 
             try
             {
                 // LE PASO LA INSTRUCCION SQL
-                this._comando.CommandText = sql;
+                PaqueteDAO._comando.CommandText = sql;
 
                 // ABRO LA CONEXION A LA BD
-                this._conexion.Open();
+                PaqueteDAO._conexion.Open();
 
                 // EJECUTO EL COMMAND
-                this._comando.ExecuteNonQuery();
+                PaqueteDAO._comando.ExecuteNonQuery();
 
                 todoOk = true;
 
@@ -63,22 +63,22 @@ namespace Entidades
             finally
             {
                 if (todoOk)
-                    this._conexion.Close();               
+                    PaqueteDAO._conexion.Close();               
             }
             return todoOk;
  
-        }*/
+        }
 
-        private PaqueteDAO()
+        static PaqueteDAO()
         {
             // CREO UN OBJETO SQLCONECTION
-            this._conexion = new SqlConnection(Properties.Settings.Default.MiConexion);
+            PaqueteDAO._conexion = new SqlConnection(Properties.Settings.Default.MiConexion);
             // CREO UN OBJETO SQLCOMMAND
-            this._comando = new SqlCommand();
+            PaqueteDAO._comando = new SqlCommand();
             // INDICO EL TIPO DE COMANDO
-            this._comando.CommandType = System.Data.CommandType.Text;
+            PaqueteDAO._comando.CommandType = System.Data.CommandType.Text;
             // ESTABLEZCO LA CONEXION
-            this._comando.Connection = this._conexion;
+            PaqueteDAO._comando.Connection = PaqueteDAO._conexion;
         }
     }
 }
