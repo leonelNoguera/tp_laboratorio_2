@@ -83,11 +83,7 @@ namespace Entidades
         p.direccionEntrega para compilar la información del paquete.*/
         public String MostrarDatos(IMostrar<Paquete> elemento)
         {
-            String retorno = "";
-            // Aún falta...
-            retorno = String.Format("" + elemento.ToString());
-            
-            return retorno;
+            return String.Format("{0} para {1}", ((Paquete)elemento).TrackingID, ((Paquete)elemento).DireccionEntrega);
         }
         
         public static Boolean operator !=(Paquete p1, Paquete p2)
@@ -118,13 +114,8 @@ namespace Entidades
 
         public override String ToString()
         {
-            return "" + this.TrackingID + " - " + this.DireccionEntrega + " - " + this.Estado;
+            return ((IMostrar <Paquete>) this).MostrarDatos(this);
         }
-
-        /*private void InformaEstado(object sender, EventArgs e) // Debe retornar.
-        {
-            //return new DelegadoEstado();
-        }*/
 
         public event DelegadoEstado InformarEstado;
 
