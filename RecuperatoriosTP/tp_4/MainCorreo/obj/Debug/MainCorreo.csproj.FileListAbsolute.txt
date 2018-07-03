@@ -9,3 +9,14 @@ D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_4\MainCorreo\obj\Debug\MainCorreo.FrmPpal.resources
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_4\MainCorreo\bin\Debug\Entidades.dll
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_4\MainCorreo\bin\Debug\Entidades.pdb
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\MainCorreo\bin\Debug\MainCorreo.exe.config
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\MainCorreo\obj\Debug\MainCorreo.exe
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\MainCorreo\obj\Debug\MainCorreo.pdb
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\MainCorreo\bin\Debug\MainCorreo.exe
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\MainCorreo\bin\Debug\MainCorreo.pdb
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\MainCorreo\bin\Debug\Entidades.dll
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\MainCorreo\bin\Debug\Entidades.pdb
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\MainCorreo\obj\Debug\MainCorreo.csprojResolveAssemblyReference.cache
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\MainCorreo\obj\Debug\MainCorreo.FrmPpal.resources
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\MainCorreo\obj\Debug\MainCorreo.Properties.Resources.resources
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\MainCorreo\obj\Debug\MainCorreo.csproj.GenerateResource.Cache

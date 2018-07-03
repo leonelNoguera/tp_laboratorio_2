@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Threading;
 
 namespace Entidades
@@ -72,11 +73,6 @@ namespace Entidades
             {
                 throw e;
             }
-        }
-
-        public void RealizarDemora()
-        {
-
         }
 
         /*MostrarDatos utilizará string.Format con el siguiente formato "{0} para {1}", p.trackingID,
