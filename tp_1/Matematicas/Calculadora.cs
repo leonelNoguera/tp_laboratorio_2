@@ -50,35 +50,26 @@ namespace Matematicas
 
             String operadorAux = "+";
 
-            if (operador == "+")
+            if (operador == "-")
             {
                 operadorAux = operador;
             }
             else
             {
-                if (operador == "-")
+                if (operador == "*")
                 {
                     operadorAux = operador;
                 }
                 else
                 {
-                    if (operador == "*")
+                    if (operador == "/")
                     {
                         operadorAux = operador;
-                    }
-                    else
-                    {
-                        if (operador == "/")
-                        {
-                            operadorAux = operador;
-                        }
                     }
                 }
             }
 
             return operadorAux;
         }
-        public Calculadora()
-        {}
     }
 }

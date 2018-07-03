@@ -10,6 +10,14 @@ namespace Matematicas
     {
         private Double _numero;
 
+        public String SetNumeroStr
+        {
+            set
+            {
+                _numero = ValidarNumero(value);
+            }
+
+        }
         public Double SetNumero
         {
             set
@@ -101,7 +109,7 @@ namespace Matematicas
 
         public Numero()
         {
-            //
+            this.SetNumero = 0;
         }
 
         public Numero(Double numero)
@@ -111,7 +119,7 @@ namespace Matematicas
 
         public Numero(String strNumero)
         {
-            //
+            this.SetNumeroStr = strNumero;
         }
 
         public static Double operator +(Numero n1, Numero n2)

@@ -22,11 +22,3 @@ D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\TP-02\bin\Debug\Entidades.dll
 D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\TP-02\bin\Debug\Entidades.pdb
-D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\TP-02\bin\Debug\TP-02.exe.config
-D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\TP-02\obj\Debug\TP-02.exe
-D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\TP-02\obj\Debug\TP-02.pdb
-D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\TP-02\bin\Debug\TP-02.exe
-D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\TP-02\bin\Debug\TP-02.pdb
-D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\TP-02\bin\Debug\Entidades.dll
-D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\TP-02\bin\Debug\Entidades.pdb
-D:\marceloNoguera\leonel\utnFra\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\tp_2\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache
