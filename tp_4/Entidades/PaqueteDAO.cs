@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Data.SqlClient;
+using System.Data;
 
 namespace Entidades
 {
@@ -30,55 +31,52 @@ namespace Entidades
     GO
     SET ANSI_PADDING OFF
     GO*/
-    public class PaqueteDAO
+    public static class PaqueteDAO
     {
-        private SqlCommand _comando;
-        private SqlConnection _conexion;
+        private static SqlCommand _comando;
+        private static SqlConnection _conexion;
 
-        public Boolean Insertar(Paquete p)
+        public static Boolean Insertar(Paquete p)
         {
             bool todoOk = false;
 
-            string sql = "INSERT INTO Personas (direccionEntrega, trackingID, alumno) VALUES(";
-            sql = sql + "'" + p.Nombre + "','" + p.Apellido + "'," + p.Edad.ToString() + ")";
+            PaqueteDAO._comando.Connection = PaqueteDAO._conexion;
 
             try
             {
-                // LE PASO LA INSTRUCCION SQL
-                this._comando.CommandText = sql;
-
                 // ABRO LA CONEXION A LA BD
-                this._conexion.Open();
+                PaqueteDAO._conexion.Open();
+
+                // LE PASO LA INSTRUCCION SQL
+                PaqueteDAO._comando = new SqlCommand("INSERT INTO [correo-sp-2017].[dbo].[Paquetes]([direccionEntrega],[trackingID],[alumno]) VALUES(" + "'" + p.DireccionEntrega + "','" + p.TrackingID + "','" + "Noguera Marcelo'" + ")", PaqueteDAO._conexion);
+                //INSERT INTO [correo-sp-2017].[dbo].[Paquetes]([direccionEntrega],[trackingID],[alumno]) VALUES('direccion','6442','Noguera Marcelo');
 
                 // EJECUTO EL COMMAND
-                this._comando.ExecuteNonQuery();
-
-                todoOk = true;
+                if (PaqueteDAO._comando.ExecuteNonQuery() != 0)
+                {
+                    todoOk = true;
+                }
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                todoOk = false;
+                throw e;
             }
             finally
             {
-                if (todoOk)
-                    this._conexion.Close();               
+                if (PaqueteDAO._conexion.State == ConnectionState.Open)
+                {
+                    PaqueteDAO._conexion.Close();               
+                }
             }
+
             return todoOk;
  
-        }*/
+        }
 
-        private PaqueteDAO()
+        static PaqueteDAO()
         {
-            // CREO UN OBJETO SQLCONECTION
-            this._conexion = new SqlConnection(Properties.Settings.Default.MiConexion);
-            // CREO UN OBJETO SQLCOMMAND
-            this._comando = new SqlCommand();
-            // INDICO EL TIPO DE COMANDO
-            this._comando.CommandType = System.Data.CommandType.Text;
-            // ESTABLEZCO LA CONEXION
-            this._comando.Connection = this._conexion;
+            PaqueteDAO._conexion = new SqlConnection(Properties.Settings.Default.MiConexion);
         }
     }
 }

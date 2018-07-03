@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Entidades
 {
@@ -11,6 +11,8 @@ namespace Entidades
         private String _direccionEntrega;
         private EEstado _estado;
         private String _trackingID;
+
+        protected Thread _hilo;
 
         public String DireccionEntrega
         {
@@ -48,7 +50,31 @@ namespace Entidades
             }
         }
 
+        /*MockCicloDeVida hará que el paquete cambie de estado de la siguiente forma:
+        a. Colocar una demora de 10 segundos.
+        b. Pasar al siguiente estado.
+        c. Informar el estado a través de InformarEstado. EventArgs no tendrá ningún dato extra.
+        d. Repetir las acciones desde el punto A hasta que el estado sea Entregado.
+        e. Finalmente guardar los datos del paquete en la base de datos.*/
         public void MockCicloDeVida()
+        {
+            while (this.Estado != EEstado.Entregado)
+            {
+                Thread.Sleep(10000);
+                this.Estado++;
+                this.InformarEstado(this, new EventArgs());
+            }
+            try
+            {
+                PaqueteDAO.Insertar(this);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public void RealizarDemora()
         {
 
         }
@@ -57,50 +83,31 @@ namespace Entidades
         p.direccionEntrega para compilar la información del paquete.*/
         public String MostrarDatos(IMostrar<Paquete> elemento)
         {
-            String retorno = "";
-            // Aún falta...
-            retorno = String.Format("" + elemento.ToString());
-            
-            return retorno;
+            return String.Format("{0} para {1}", ((Paquete)elemento).TrackingID, ((Paquete)elemento).DireccionEntrega);
         }
         
         public static Boolean operator !=(Paquete p1, Paquete p2)
         {
-            /*Boolean resultado = !(p1 == p2);
-            return resultado;*/
             return !(p1 == p2);
         }
         
         public static Boolean operator ==(Paquete p1, Paquete p2)
         {
-            /*Boolean resultado = false;
-
-            if (p1.TrackingID.Equals(p2.TrackingID))
-            {
-                resultado = true;
-            }
-
-            return resultado;*/
-
             return p1.TrackingID.Equals(p2.TrackingID);
         }
 
         public Paquete(String direccionEntrega, String trackingID)
         {
-
+            this.DireccionEntrega = direccionEntrega;
+            this.TrackingID = trackingID;
         }
 
         public override String ToString()
         {
-            return "";
+            return ((IMostrar <Paquete>) this).MostrarDatos(this);
         }
 
-        /*private void InformaEstado(object sender, EventArgs e) // Debe retornar.
-        {
-            //return new DelegadoEstado();
-        }*/
-
-        public event DelegadoEstado InformaEstado;
+        public event DelegadoEstado InformarEstado;
 
         public delegate void DelegadoEstado(object sender, EventArgs e); 
         
