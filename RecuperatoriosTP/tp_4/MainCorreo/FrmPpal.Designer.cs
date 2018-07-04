@@ -90,6 +90,7 @@
             this.lstEstadoEntregado.Name = "lstEstadoEntregado";
             this.lstEstadoEntregado.Size = new System.Drawing.Size(176, 108);
             this.lstEstadoEntregado.TabIndex = 3;
+            this.lstEstadoEntregado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lstEstadoEntregado_MouseDown);
             // 
             // lblEstadoEntregado
             // 
@@ -201,13 +202,13 @@
             this.cmsListas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mostrarToolStripMenuItem});
             this.cmsListas.Name = "cmsListas";
-            this.cmsListas.Size = new System.Drawing.Size(125, 26);
+            this.cmsListas.Size = new System.Drawing.Size(124, 26);
             this.cmsListas.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // mostrarToolStripMenuItem
             // 
             this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
-            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.mostrarToolStripMenuItem.Text = "Mostrar...";
             this.mostrarToolStripMenuItem.Click += new System.EventHandler(this.mostrarToolStripMenuItem_Click_1);
             // 

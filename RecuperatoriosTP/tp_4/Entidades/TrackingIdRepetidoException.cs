@@ -8,12 +8,14 @@ namespace Entidades
 {
     public class TrackingIdRepetidoException : Exception
     {
-        public TrackingIdRepetidoException(String mensaje)
+
+        public TrackingIdRepetidoException(String mensaje) : base(mensaje)
         {
 
         }
 
         public TrackingIdRepetidoException(String mensaje, Exception inner)
+            : base(mensaje, inner)
         {
 
         }

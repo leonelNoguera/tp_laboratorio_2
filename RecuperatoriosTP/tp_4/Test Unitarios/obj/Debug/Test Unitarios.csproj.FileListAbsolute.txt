@@ -1,0 +1,7 @@
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\Test Unitarios\bin\Debug\Test Unitarios.dll
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\Test Unitarios\bin\Debug\Test Unitarios.pdb
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\Test Unitarios\bin\Debug\Entidades.dll
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\Test Unitarios\bin\Debug\Entidades.pdb
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\Test Unitarios\obj\Debug\Test Unitarios.csprojResolveAssemblyReference.cache
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\Test Unitarios\obj\Debug\Test Unitarios.dll
+D:\marceloNoguera\programacionLaboratorioII\Visual Studio 2012\tp_laboratorio_2\RecuperatoriosTP\tp_4\Test Unitarios\obj\Debug\Test Unitarios.pdb

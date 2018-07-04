@@ -117,5 +117,13 @@ namespace MainCorreo
         {
             this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
         }
+
+        private void lstEstadoEntregado_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                this.cmsListas.Show(MousePosition.X, MousePosition.Y);
+            }
+        }
     }
 }
